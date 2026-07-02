@@ -13,7 +13,7 @@
   <main>
     <section class="page-hero py-12">
       <div class="max-w-7xl mx-auto px-4">
-        <h1 class="text-3xl font-bold">Membership Registration</h1>
+        <h1 class="font-bold">Membership Registration</h1>
         <p class="text-slate-200 mt-2">Complete the form below to join INNNI</p>
       </div>
     </section>
@@ -22,11 +22,11 @@
         <img src="../assets/img/networking.jpg" alt="Join INNNI community" class="rounded-xl shadow-lg w-full h-full min-h-[400px] object-cover sticky top-24">
       </div>
       <div class="lg:col-span-3">
-      <div class="mb-8 flex items-center justify-between">
+      <div class="mb-8 reg-steps flex items-center justify-between">
         <div class="flex items-center gap-2"><span class="w-8 h-8 rounded-full bg-teal-600 text-white flex items-center justify-center text-sm font-bold">1</span><span class="text-sm font-medium">Details</span></div>
-        <div class="flex-1 h-0.5 bg-slate-200 mx-2"></div>
+        <div class="step-line flex-1 h-0.5 bg-slate-200 mx-2"></div>
         <div class="flex items-center gap-2"><span class="w-8 h-8 rounded-full bg-slate-200 text-slate-500 flex items-center justify-center text-sm font-bold">2</span><span class="text-sm text-slate-500">Payment</span></div>
-        <div class="flex-1 h-0.5 bg-slate-200 mx-2"></div>
+        <div class="step-line flex-1 h-0.5 bg-slate-200 mx-2"></div>
         <div class="flex items-center gap-2"><span class="w-8 h-8 rounded-full bg-slate-200 text-slate-500 flex items-center justify-center text-sm font-bold">3</span><span class="text-sm text-slate-500">Confirm</span></div>
       </div>
       <form class="card space-y-4" onsubmit="event.preventDefault(); alert('Mock form — payment step would follow via Stripe.');">
@@ -59,7 +59,7 @@
           <input type="checkbox" required class="mt-1 w-4 h-4 rounded">
           I have read and accept the <a href="governance.html" class="text-teal-600 underline">Code of Conduct</a>
         </label>
-        <button type="submit" class="w-full py-3 rounded-lg bg-teal-600 text-white font-semibold hover:bg-teal-500">Continue to Payment</button>
+        <button type="submit" class="btn-touch w-full py-3 rounded-lg bg-teal-600 text-white font-semibold hover:bg-teal-500">Continue to Payment</button>
       </form>
       </div>
     </div>

@@ -65,18 +65,18 @@ function renderPublicHeader(paths, activePage) {
   ).join('');
   const moreLinks = NAV_MORE.map(
     (n) =>
-      `<a href="${pageHref(paths, n.href)}" class="block px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-teal-600">${n.label}</a>`
+      `<a href="${pageHref(paths, n.href)}" class="block px-4 py-3 text-sm text-slate-600 hover:bg-slate-50 hover:text-teal-600">${n.label}</a>`
   ).join('');
 
   return `
   <header class="bg-white shadow-sm sticky top-0 z-50 border-b border-slate-100">
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-16">
-        <a href="${homeHref}" class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-lg innni-gradient flex items-center justify-center text-white font-bold text-sm">IN</div>
-          <div class="hidden sm:block">
-            <span class="font-bold text-slate-800 text-lg leading-tight block">INNNI</span>
-            <span class="text-xs text-slate-500">Internationally Educated Nurses Network</span>
+      <div class="flex justify-between items-center h-14 sm:h-16">
+        <a href="${homeHref}" class="flex items-center gap-2 sm:gap-3 min-w-0">
+          <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg innni-gradient flex items-center justify-center text-white font-bold text-sm flex-shrink-0">IN</div>
+          <div class="min-w-0">
+            <span class="font-bold text-slate-800 text-base sm:text-lg leading-tight block">INNNI</span>
+            <span class="text-xs text-slate-500 hidden sm:block truncate">Internationally Educated Nurses</span>
           </div>
         </a>
         <div class="hidden lg:flex items-center gap-1">
@@ -90,18 +90,19 @@ function renderPublicHeader(paths, activePage) {
               ${moreLinks}
             </div>
           </div>
-          <a href="${memberHref}" class="ml-3 inline-flex items-center px-4 py-2 rounded-lg text-sm font-medium text-white bg-teal-600 hover:bg-teal-500 transition-colors">Member Login</a>
+          <a href="${memberHref}" class="ml-3 inline-flex items-center px-4 py-2 rounded-lg text-sm font-medium text-white bg-teal-600 hover:bg-teal-500 transition-colors btn-touch">Member Login</a>
         </div>
-        <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100" aria-label="Menu">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <button id="mobile-menu-btn" type="button" class="lg:hidden p-2 rounded-lg text-slate-600 hover:bg-slate-100" aria-label="Open menu" aria-expanded="false">
+          <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
         </button>
       </div>
       <div id="mobile-menu" class="hidden lg:hidden pb-4 border-t border-slate-100">
-        <div class="flex flex-col gap-1 pt-3">
-          ${NAV_PUBLIC.map((n) => `<a href="${pageHref(paths, n.href)}" class="px-3 py-2 rounded-lg text-sm ${navClass(n.id, activePage)}">${n.label}</a>`).join('')}
-          <p class="px-3 pt-2 text-xs font-semibold text-slate-400 uppercase">More</p>
-          ${NAV_MORE.map((n) => `<a href="${pageHref(paths, n.href)}" class="px-3 py-2 rounded-lg text-sm text-slate-600">${n.label}</a>`).join('')}
-          <a href="${memberHref}" class="mx-3 mt-2 text-center px-4 py-2 rounded-lg text-sm font-medium text-white bg-teal-600">Member Login</a>
+        <div class="flex flex-col gap-0.5 pt-2">
+          ${NAV_PUBLIC.map((n) => `<a href="${pageHref(paths, n.href)}" class="mobile-nav-link px-3 py-3 rounded-lg text-sm ${navClass(n.id, activePage)}">${n.label}</a>`).join('')}
+          <p class="px-3 pt-3 pb-1 text-xs font-semibold text-slate-400 uppercase">More</p>
+          ${NAV_MORE.map((n) => `<a href="${pageHref(paths, n.href)}" class="mobile-nav-link px-3 py-3 rounded-lg text-sm text-slate-600">${n.label}</a>`).join('')}
+          <a href="${memberHref}" class="mx-3 mt-3 text-center px-4 py-3 rounded-lg text-sm font-medium text-white bg-teal-600 btn-touch">Member Login</a>
         </div>
       </div>
     </nav>
@@ -113,18 +114,18 @@ function renderMemberHeader(paths) {
   return `
   <header class="bg-white shadow-sm sticky top-0 z-50 border-b border-slate-100">
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-16">
-        <a href="${homeHref}" class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-lg innni-gradient flex items-center justify-center text-white font-bold text-sm">IN</div>
-          <div>
-            <span class="font-bold text-slate-800">Member Portal</span>
-            <span class="badge-member ml-2">Logged in</span>
+      <div class="flex justify-between items-center h-14 sm:h-16 gap-2">
+        <a href="${homeHref}" class="flex items-center gap-2 min-w-0">
+          <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg innni-gradient flex items-center justify-center text-white font-bold text-sm flex-shrink-0">IN</div>
+          <div class="min-w-0">
+            <span class="font-bold text-slate-800 text-sm sm:text-base block truncate">Member Portal</span>
+            <span class="badge-member text-xs">Active</span>
           </div>
         </a>
-        <div class="flex items-center gap-4">
-          <span class="hidden sm:block text-sm text-slate-600">Welcome, <strong>Priya Sharma</strong></span>
-          <a href="${homeHref}" class="text-sm text-slate-500 hover:text-teal-600">Back to site</a>
-          <a href="${paths.member}login.html" class="text-sm text-red-600 hover:text-red-700 font-medium">Logout</a>
+        <div class="flex items-center gap-2 sm:gap-4 flex-shrink-0">
+          <span class="hidden md:block text-sm text-slate-600">Welcome, <strong>Priya</strong></span>
+          <a href="${homeHref}" class="text-xs sm:text-sm text-slate-500 hover:text-teal-600 whitespace-nowrap">Back to site</a>
+          <a href="${paths.member}login.html" class="text-xs sm:text-sm text-red-600 hover:text-red-700 font-medium whitespace-nowrap">Logout</a>
         </div>
       </div>
     </nav>
@@ -134,7 +135,7 @@ function renderMemberHeader(paths) {
 function renderFooter(paths) {
   return `
   <footer class="bg-slate-900 text-slate-300 mt-auto">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
         <div class="md:col-span-1">
           <div class="flex items-center gap-2 mb-4">
@@ -183,20 +184,46 @@ function renderMemberSidebar(activePage) {
   const links = NAV_MEMBER.map((n) => {
     const active = activePage === n.id ? 'active' : '';
     return `
-    <a href="${n.href}" class="flex items-center gap-3 px-4 py-3 text-sm border-l-4 border-transparent hover:bg-slate-50 ${active ? 'active' : 'text-slate-600'}">
-      <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="${n.icon}"/></svg>
-      ${n.label}
+    <a href="${n.href}" class="${active}">
+      <svg class="w-4 h-4 md:w-5 md:h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="${n.icon}"/></svg>
+      <span>${n.label}</span>
     </a>`;
   }).join('');
   return `
-  <aside class="member-sidebar w-full md:w-64 bg-white border-r border-slate-200 flex-shrink-0">
-    <div class="p-4 border-b border-slate-100">
+  <aside class="member-sidebar">
+    <div class="member-sidebar-info p-4 border-b border-slate-100">
       <p class="text-xs font-semibold text-slate-400 uppercase tracking-wide">Member Area</p>
       <p class="text-sm font-medium text-slate-800 mt-1">Membership: <span class="text-teal-600">Active</span></p>
       <p class="text-xs text-slate-500">Renews: 15 Jan 2027</p>
     </div>
-    <nav class="py-2">${links}</nav>
+    <nav class="member-nav">${links}</nav>
   </aside>`;
+}
+
+function setupMobileMenu() {
+  const menuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const iconOpen = document.getElementById('menu-icon-open');
+  const iconClose = document.getElementById('menu-icon-close');
+
+  if (!menuBtn || !mobileMenu) return;
+
+  const setOpen = (open) => {
+    mobileMenu.classList.toggle('hidden', !open);
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    if (iconOpen) iconOpen.classList.toggle('hidden', open);
+    if (iconClose) iconClose.classList.toggle('hidden', !open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  };
+
+  menuBtn.addEventListener('click', () => {
+    setOpen(mobileMenu.classList.contains('hidden'));
+  });
+
+  mobileMenu.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => setOpen(false));
+  });
 }
 
 function initLayout(options = {}) {
@@ -217,19 +244,20 @@ function initLayout(options = {}) {
     sidebarEl.innerHTML = renderMemberSidebar(page);
   }
 
-  const menuBtn = document.getElementById('mobile-menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-  if (menuBtn && mobileMenu) {
-    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
-  }
+  setupMobileMenu();
 
   const cookieBanner = document.getElementById('cookie-banner');
   const cookieAccept = document.getElementById('cookie-accept');
   if (cookieBanner && cookieAccept) {
-    if (localStorage.getItem('innni-cookie-ok')) cookieBanner.classList.add('hidden');
+    if (localStorage.getItem('innni-cookie-ok')) {
+      cookieBanner.classList.add('hidden');
+    } else {
+      document.body.classList.add('has-cookie-banner');
+    }
     cookieAccept.addEventListener('click', () => {
       localStorage.setItem('innni-cookie-ok', '1');
       cookieBanner.classList.add('hidden');
+      document.body.classList.remove('has-cookie-banner');
     });
   }
 }
