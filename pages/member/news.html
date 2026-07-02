@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Announcements | INNNI Member Portal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/styles.css">
+</head>
+<body class="bg-slate-100 min-h-screen flex flex-col">
+  <div id="site-header"></div>
+  <div class="flex flex-grow max-w-7xl mx-auto w-full">
+    <div id="member-sidebar"></div>
+    <main class="flex-grow p-4 md:p-8">
+      <h1 class="text-2xl font-bold text-slate-800 mb-2">Internal Announcements</h1>
+      <p class="text-slate-600 mb-8">Member-only news and organisational updates.</p>
+      <div class="space-y-4">
+        <article class="card"><span class="badge-member">New</span><h2 class="font-bold text-lg text-slate-800 mt-2">Member AGM — 20 September 2026</h2><p class="text-sm text-slate-600 mt-2">All members are invited to attend our Annual General Meeting in Belfast. Registration opens 1 August. Proxy voting forms will be circulated to members unable to attend in person.</p><p class="text-xs text-slate-400 mt-4">30 June 2026</p></article>
+        <article class="card"><h2 class="font-bold text-lg text-slate-800">New member resource: Trust onboarding checklist</h2><p class="text-sm text-slate-600 mt-2">A practical checklist for internationally educated nurses starting in a new Trust. Available in the Download Centre.</p><p class="text-xs text-slate-400 mt-4">23 June 2026</p></article>
+        <article class="card"><h2 class="font-bold text-lg text-slate-800">Wellbeing group — July session schedule</h2><p class="text-sm text-slate-600 mt-2">Peer support circles every Thursday evening in July. Open to all members.</p><p class="text-xs text-slate-400 mt-4">15 June 2026</p></article>
+      </div>
+    </main>
+  </div>
+  <div id="site-footer"></div>
+  <script src="../../assets/js/layout.js"></script>
+  <script>initLayout({ page: 'member-news', siteRoot: '../../', area: 'member' });</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Working Groups | INNNI Member Portal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/styles.css">
+</head>
+<body class="bg-slate-100 min-h-screen flex flex-col">
+  <div id="site-header"></div>
+  <div class="flex flex-grow max-w-7xl mx-auto w-full">
+    <div id="member-sidebar"></div>
+    <main class="flex-grow p-4 md:p-8">
+      <h1 class="text-2xl font-bold text-slate-800 mb-8">Working Groups</h1>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="card">
+          <h2 class="font-bold text-slate-800">Education Working Group</h2>
+          <p class="text-sm text-teal-600">Lead: Maria Santos · education@innni.org.uk</p>
+          <p class="text-sm text-slate-600 mt-3">CPD pathways, training signposting, and professional development for IENs.</p>
+          <span class="inline-block mt-3 text-xs px-2 py-1 bg-teal-100 text-teal-700 rounded">You are a member</span>
+        </div>
+        <div class="card">
+          <h2 class="font-bold text-slate-800">Wellbeing Working Group</h2>
+          <p class="text-sm text-teal-600">Lead: Amara Okonkwo · wellbeing@innni.org.uk</p>
+          <p class="text-sm text-slate-600 mt-3">Peer support, mental health initiatives, and member wellbeing programmes.</p>
+          <button class="mt-4 px-4 py-2 text-sm rounded-lg bg-teal-600 text-white hover:bg-teal-500" onclick="document.getElementById('interest-form').classList.remove('hidden')">Express interest</button>
+        </div>
+        <div class="card md:col-span-2">
+          <h2 class="font-bold text-slate-800">Governance Working Group</h2>
+          <p class="text-sm text-teal-600">Lead: Dr. Sarah O'Brien</p>
+          <p class="text-sm text-slate-600 mt-3">Strategic planning and organisational governance. Members with governance experience encouraged to apply.</p>
+          <button class="mt-4 px-4 py-2 text-sm rounded-lg border border-teal-600 text-teal-600 hover:bg-teal-50" onclick="document.getElementById('interest-form').classList.remove('hidden')">Express interest</button>
+        </div>
+      </div>
+      <div id="interest-form" class="hidden card mt-8 max-w-lg">
+        <h3 class="font-bold text-slate-800 mb-4">Express interest in joining</h3>
+        <form onsubmit="event.preventDefault(); alert('Mock: interest submitted.'); this.parentElement.classList.add('hidden');">
+          <div class="form-group"><label>Working group</label><select><option>Wellbeing Working Group</option><option>Governance Working Group</option></select></div>
+          <div class="form-group"><label>Why would you like to join?</label><textarea rows="3"></textarea></div>
+          <button type="submit" class="px-4 py-2 rounded-lg bg-teal-600 text-white text-sm">Submit</button>
+        </form>
+      </div>
+    </main>
+  </div>
+  <div id="site-footer"></div>
+  <script src="../../assets/js/layout.js"></script>
+  <script>initLayout({ page: 'member-groups', siteRoot: '../../', area: 'member' });</script>
+</body>
+</html>

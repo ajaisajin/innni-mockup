@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events Calendar | INNNI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body class="bg-slate-50 min-h-screen flex flex-col">
+  <div id="site-header"></div>
+  <main>
+    <section class="page-hero py-12 relative overflow-hidden">
+      <div class="absolute inset-0"><img src="../assets/img/workshop.jpg" alt="" class="w-full h-full object-cover opacity-25"></div>
+      <div class="relative max-w-7xl mx-auto px-4"><h1 class="text-3xl font-bold">Events Calendar</h1><p class="text-slate-200 mt-2">Workshops, meetings, and social activities</p></div>
+    </section>
+    <div class="max-w-7xl mx-auto px-4 py-12">
+      <div class="flex flex-wrap gap-4 mb-8">
+        <select class="w-auto"><option>All months</option><option>July 2026</option><option>August 2026</option></select>
+        <select class="w-auto"><option>All types</option><option>Workshop</option><option>Meeting</option><option>Social</option></select>
+      </div>
+      <div class="space-y-4">
+        <a href="event-detail.html" class="card flex flex-col sm:flex-row gap-0 overflow-hidden p-0 hover:border-teal-200">
+          <img src="../assets/img/workshop.jpg" alt="" class="w-full sm:w-48 h-36 sm:h-auto object-cover flex-shrink-0">
+          <div class="p-5 flex gap-4 flex-grow"><div class="bg-teal-600 text-white rounded-lg p-4 text-center min-w-[70px] h-fit self-start"><div class="text-2xl font-bold">15</div><div class="text-xs">JUL</div></div><div class="flex-grow"><h2 class="font-bold text-lg text-slate-800">CV & Interview Skills Workshop</h2><p class="text-sm text-slate-500">Belfast · In person · 10:00 - 13:00</p><p class="text-sm text-slate-600 mt-2">Members can register via the portal. Limited places available.</p><span class="inline-block mt-2 text-xs px-2 py-1 bg-green-100 text-green-700 rounded">Registration open</span></div></div>
+        </a>
+        <a href="event-detail.html" class="card flex flex-col sm:flex-row gap-0 overflow-hidden p-0 hover:border-teal-200">
+          <img src="../assets/img/education.jpg" alt="" class="w-full sm:w-48 h-36 sm:h-auto object-cover flex-shrink-0">
+          <div class="p-5 flex gap-4 flex-grow"><div class="bg-teal-600 text-white rounded-lg p-4 text-center min-w-[70px] h-fit self-start"><div class="text-2xl font-bold">22</div><div class="text-xs">JUL</div></div><div class="flex-grow"><h2 class="font-bold text-lg text-slate-800">Education Working Group Meeting</h2><p class="text-sm text-slate-500">Online · 18:00 - 19:30</p><p class="text-sm text-slate-600 mt-2">Open to all members. Express interest in joining the working group.</p><span class="inline-block mt-2 text-xs px-2 py-1 bg-green-100 text-green-700 rounded">Registration open</span></div></div>
+        </a>
+        <a href="event-detail.html" class="card flex flex-col sm:flex-row gap-0 overflow-hidden p-0 hover:border-teal-200">
+          <img src="../assets/img/networking.jpg" alt="" class="w-full sm:w-48 h-36 sm:h-auto object-cover flex-shrink-0">
+          <div class="p-5 flex gap-4 flex-grow"><div class="bg-slate-400 text-white rounded-lg p-4 text-center min-w-[70px] h-fit self-start"><div class="text-2xl font-bold">5</div><div class="text-xs">AUG</div></div><div class="flex-grow"><h2 class="font-bold text-lg text-slate-800">Summer Social & Networking Evening</h2><p class="text-sm text-slate-500">Belfast · 19:00 - 21:30</p><p class="text-sm text-slate-600 mt-2">Informal networking for members and guests.</p><span class="inline-block mt-2 text-xs px-2 py-1 bg-amber-100 text-amber-700 rounded">Coming soon</span></div></div>
+        </a>
+      </div>
+    </div>
+  </main>
+  <div id="site-footer"></div>
+  <script src="../assets/js/layout.js"></script>
+  <script>initLayout({ page: 'events', siteRoot: '../' });</script>
+</body>
+</html>

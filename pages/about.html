@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | INNNI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body class="bg-slate-50 min-h-screen flex flex-col">
+  <div id="site-header"></div>
+  <main>
+    <section class="page-hero relative overflow-hidden">
+      <div class="absolute inset-0">
+        <img src="../assets/img/hospital.jpg" alt="" class="w-full h-full object-cover opacity-30">
+      </div>
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 class="text-4xl font-bold mb-4">About INNNI</h1>
+        <p class="text-lg text-slate-200 max-w-2xl">Our vision, mission, and the people leading the network for internationally educated nurses.</p>
+      </div>
+    </section>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 prose-innni">
+      <img src="../assets/img/medical-team.jpg" alt="INNNI community" class="w-full h-64 object-cover rounded-xl mb-8 not-prose shadow-md">
+      <h2>Our Vision</h2>
+      <p>A Northern Ireland where internationally educated nurses are fully recognised, supported, and empowered to thrive in their professional careers.</p>
+      <h2>Our Mission</h2>
+      <p>INNNI connects, advocates for, and supports internationally educated nurses through networking, professional development, policy engagement, and wellbeing initiatives.</p>
+      <h2>Aims & Objectives</h2>
+      <ul>
+        <li>Represent internationally educated nurses at Trust, regional, and policy levels</li>
+        <li>Provide career development and educational signposting</li>
+        <li>Foster peer support and professional community</li>
+        <li>Promote equality, diversity, and inclusion across the nursing workforce</li>
+      </ul>
+      <h2>Background</h2>
+      <p>INNNI was established to address the unique challenges faced by nurses who trained outside the UK and now practise in Northern Ireland. We work alongside Trusts, NIPEC, and regional stakeholders to ensure their voices are heard.</p>
+      <h2>Governance & Leadership</h2>
+      <div class="grid sm:grid-cols-2 gap-4 not-prose my-6">
+        <div class="card">
+          <img src="../assets/img/avatar-1.jpg" alt="Dr. Sarah O'Brien" class="w-16 h-16 rounded-full object-cover mb-3">
+          <h3 class="font-bold text-slate-800">Dr. Sarah O'Brien</h3>
+          <p class="text-sm text-teal-600">Chair</p>
+          <p class="text-sm text-slate-600 mt-2">Leading governance and strategic partnerships across the region.</p>
+        </div>
+        <div class="card">
+          <img src="../assets/img/avatar-4.jpg" alt="James Okonkwo" class="w-16 h-16 rounded-full object-cover mb-3">
+          <h3 class="font-bold text-slate-800">James Okonkwo</h3>
+          <p class="text-sm text-teal-600">Vice Chair</p>
+          <p class="text-sm text-slate-600 mt-2">Overseeing membership engagement and working group coordination.</p>
+        </div>
+      </div>
+      <p><a href="governance.html" class="text-teal-600 font-medium hover:underline">View governance documents</a></p>
+    </div>
+  </main>
+  <div id="site-footer"></div>
+  <script src="../assets/js/layout.js"></script>
+  <script>initLayout({ page: 'about', siteRoot: '../' });</script>
+</body>
+</html>
