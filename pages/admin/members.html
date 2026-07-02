@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Members | INNNI Admin</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/styles.css">
+</head>
+<body class="bg-slate-100 min-h-screen flex flex-col">
+  <div id="site-header"></div>
+  <div class="admin-layout">
+    <div id="admin-sidebar"></div>
+    <main class="admin-main">
+
+      <div class="admin-page-header">
+        <div>
+          <h1 class="text-xl sm:text-2xl font-bold text-slate-800">Membership Management</h1>
+          <p class="text-sm text-slate-500 mt-1">Approve, renew, and manage member accounts</p>
+        </div>
+        <button type="button" class="btn-admin-secondary text-sm" onclick="alert('Mock: export CSV')">Export CSV</button>
+      </div>
+      <div class="admin-toolbar">
+        <div class="admin-search">
+          <input type="search" placeholder="Search by name or email...">
+          <button type="button" class="btn-admin-secondary text-sm px-4">Search</button>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <select class="w-auto text-sm"><option>All statuses</option><option selected>Pending approval</option><option>Active</option><option>Expired</option></select>
+          <select class="w-auto text-sm"><option>All plans</option><option>Annual</option><option>Monthly</option></select>
+        </div>
+      </div>
+      <div class="admin-table-wrap">
+        <table class="admin-table">
+          <thead><tr><th>Member</th><th>Trust</th><th>Plan</th><th>Status</th><th>Joined</th><th>Actions</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><div class="font-medium text-slate-800">Anita Kaur</div><div class="text-xs text-slate-500">anita.kaur@example.com</div></td>
+              <td>Belfast HSC Trust</td><td>Annual</td>
+              <td><span class="status-badge status-pending">Pending</span></td>
+              <td class="text-slate-500">2 Jul 2026</td>
+              <td class="space-x-2 whitespace-nowrap"><a href="member-detail.html" class="text-teal-600 text-sm font-medium hover:underline">Review</a></td>
+            </tr>
+            <tr>
+              <td><div class="font-medium text-slate-800">James Okonkwo</div><div class="text-xs text-slate-500">j.okonkwo@example.com</div></td>
+              <td>Southern HSC Trust</td><td>Monthly</td>
+              <td><span class="status-badge status-pending">Pending</span></td>
+              <td class="text-slate-500">1 Jul 2026</td>
+              <td><a href="member-detail.html" class="text-teal-600 text-sm font-medium hover:underline">Review</a></td>
+            </tr>
+            <tr>
+              <td><div class="font-medium text-slate-800">Priya Sharma</div><div class="text-xs text-slate-500">priya.sharma@example.com</div></td>
+              <td>South Eastern HSC Trust</td><td>Annual</td>
+              <td><span class="status-badge status-active">Active</span></td>
+              <td class="text-slate-500">15 Jan 2025</td>
+              <td><a href="member-detail.html" class="text-teal-600 text-sm font-medium hover:underline">View</a></td>
+            </tr>
+            <tr>
+              <td><div class="font-medium text-slate-800">David Chen</div><div class="text-xs text-slate-500">d.chen@example.com</div></td>
+              <td>Northern HSC Trust</td><td>Annual</td>
+              <td><span class="status-badge status-active">Active</span></td>
+              <td class="text-slate-500">3 Mar 2024</td>
+              <td><a href="member-detail.html" class="text-teal-600 text-sm font-medium hover:underline">View</a></td>
+            </tr>
+            <tr>
+              <td><div class="font-medium text-slate-800">Elena Popescu</div><div class="text-xs text-slate-500">e.popescu@example.com</div></td>
+              <td>Western HSC Trust</td><td>Monthly</td>
+              <td><span class="status-badge status-expired">Expired</span></td>
+              <td class="text-slate-500">10 Aug 2023</td>
+              <td><a href="member-detail.html" class="text-teal-600 text-sm font-medium hover:underline">View</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-slate-500 mt-4">Showing 5 of 512 members</p>
+    </main>
+  </div>
+  <div id="site-footer"></div>
+  <script src="../../assets/js/layout.js"></script>
+  <script>initLayout({ page: 'admin-members', siteRoot: '../../', area: 'admin' });</script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Users & Roles | INNNI Admin</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/styles.css">
+</head>
+<body class="bg-slate-100 min-h-screen flex flex-col">
+  <div id="site-header"></div>
+  <div class="admin-layout">
+    <div id="admin-sidebar"></div>
+    <main class="admin-main">
+
+      <div class="admin-page-header">
+        <div>
+          <h1 class="text-xl sm:text-2xl font-bold text-slate-800">Users & Roles</h1>
+          <p class="text-sm text-slate-500 mt-1">Manage admin accounts and permissions</p>
+        </div>
+        <button type="button" class="btn-admin-primary text-sm" onclick="alert('Mock: invite admin user')">+ Invite admin</button>
+      </div>
+      <div class="admin-table-wrap mb-8">
+        <table class="admin-table">
+          <thead><tr><th>User</th><th>Role</th><th>Last login</th><th>Status</th><th>Actions</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><div class="font-medium text-slate-800">Sarah O'Neill</div><div class="text-xs text-slate-500">admin@innni.org.uk</div></td>
+              <td>Super Admin</td><td class="text-slate-500">Today, 08:32</td>
+              <td><span class="status-badge status-active">Active</span></td>
+              <td><button class="text-teal-600 text-sm font-medium hover:underline">Edit</button></td>
+            </tr>
+            <tr>
+              <td><div class="font-medium text-slate-800">Michael Byrne</div><div class="text-xs text-slate-500">m.byron@innni.org.uk</div></td>
+              <td>Content Editor</td><td class="text-slate-500">Yesterday</td>
+              <td><span class="status-badge status-active">Active</span></td>
+              <td><button class="text-teal-600 text-sm font-medium hover:underline">Edit</button></td>
+            </tr>
+            <tr>
+              <td><div class="font-medium text-slate-800">Claire Devlin</div><div class="text-xs text-slate-500">c.devlin@innni.org.uk</div></td>
+              <td>Membership Admin</td><td class="text-slate-500">3 days ago</td>
+              <td><span class="status-badge status-active">Active</span></td>
+              <td><button class="text-teal-600 text-sm font-medium hover:underline">Edit</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <section class="card">
+        <h2 class="font-bold text-slate-800 mb-4">Role permissions</h2>
+        <div class="admin-table-wrap border-0">
+          <table class="admin-table">
+            <thead><tr><th>Permission</th><th>Super Admin</th><th>Content Editor</th><th>Membership Admin</th></tr></thead>
+            <tbody class="text-center">
+              <tr><td class="text-left font-medium">Manage members</td><td>✓</td><td>—</td><td>✓</td></tr>
+              <tr><td class="text-left font-medium">Manage content & events</td><td>✓</td><td>✓</td><td>—</td></tr>
+              <tr><td class="text-left font-medium">View payments</td><td>✓</td><td>—</td><td>✓</td></tr>
+              <tr><td class="text-left font-medium">Manage admin users</td><td>✓</td><td>—</td><td>—</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section class="card mt-6">
+        <h2 class="font-bold text-slate-800 mb-2">Membership settings</h2>
+        <label class="flex items-start gap-3 text-sm mt-4"><input type="checkbox" checked class="w-4 h-4 rounded mt-0.5"> Require administrator approval for new registrations</label>
+        <label class="flex items-start gap-3 text-sm mt-3"><input type="checkbox" checked class="w-4 h-4 rounded mt-0.5"> Send email notification when new member registers</label>
+        <label class="flex items-start gap-3 text-sm mt-3"><input type="checkbox" checked class="w-4 h-4 rounded mt-0.5"> Auto-send renewal reminder 30 days before expiry</label>
+        <button type="button" class="btn-admin-primary text-sm mt-4" onclick="alert('Mock: settings saved')">Save settings</button>
+      </section>
+    </main>
+  </div>
+  <div id="site-footer"></div>
+  <script src="../../assets/js/layout.js"></script>
+  <script>initLayout({ page: 'admin-settings', siteRoot: '../../', area: 'admin' });</script>
+</body>
+</html>

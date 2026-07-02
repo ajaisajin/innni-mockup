@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News | INNNI Admin</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/styles.css">
+</head>
+<body class="bg-slate-100 min-h-screen flex flex-col">
+  <div id="site-header"></div>
+  <div class="admin-layout">
+    <div id="admin-sidebar"></div>
+    <main class="admin-main">
+
+      <div class="admin-page-header">
+        <div>
+          <h1 class="text-xl sm:text-2xl font-bold text-slate-800">News & Announcements</h1>
+          <p class="text-sm text-slate-500 mt-1">Manage public news and member-only announcements</p>
+        </div>
+        <a href="news-edit.html" class="btn-admin-primary text-sm">+ Create article</a>
+      </div>
+      <div class="flex flex-wrap gap-2 mb-4">
+        <button class="px-3 py-1.5 rounded-full bg-teal-600 text-white text-sm">All</button>
+        <button class="px-3 py-1.5 rounded-full bg-white border text-slate-600 text-sm">Public news</button>
+        <button class="px-3 py-1.5 rounded-full bg-white border text-slate-600 text-sm">Member announcements</button>
+        <button class="px-3 py-1.5 rounded-full bg-white border text-slate-600 text-sm">Drafts</button>
+      </div>
+      <div class="admin-table-wrap">
+        <table class="admin-table">
+          <thead><tr><th>Title</th><th>Category</th><th>Audience</th><th>Status</th><th>Date</th><th>Actions</th></tr></thead>
+          <tbody>
+            <tr>
+              <td class="font-medium text-slate-800">INNNI response to regional nursing workforce plan</td>
+              <td>Policy</td><td>Public</td>
+              <td><span class="status-badge status-published">Published</span></td>
+              <td class="text-slate-500">28 Jun 2026</td>
+              <td><a href="news-edit.html" class="text-teal-600 text-sm font-medium hover:underline">Edit</a></td>
+            </tr>
+            <tr>
+              <td class="font-medium text-slate-800">Member AGM date confirmed — 20 September</td>
+              <td>Internal</td><td>Members only</td>
+              <td><span class="status-badge status-published">Published</span></td>
+              <td class="text-slate-500">30 Jun 2026</td>
+              <td><a href="news-edit.html" class="text-teal-600 text-sm font-medium hover:underline">Edit</a></td>
+            </tr>
+            <tr>
+              <td class="font-medium text-slate-800">Summer wellbeing programme for members</td>
+              <td>Wellbeing</td><td>Public</td>
+              <td><span class="status-badge status-draft">Draft</span></td>
+              <td class="text-slate-500">—</td>
+              <td><a href="news-edit.html" class="text-teal-600 text-sm font-medium hover:underline">Edit</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+  <div id="site-footer"></div>
+  <script src="../../assets/js/layout.js"></script>
+  <script>initLayout({ page: 'admin-news', siteRoot: '../../', area: 'admin' });</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events | INNNI Admin</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/styles.css">
+</head>
+<body class="bg-slate-100 min-h-screen flex flex-col">
+  <div id="site-header"></div>
+  <div class="admin-layout">
+    <div id="admin-sidebar"></div>
+    <main class="admin-main">
+
+      <div class="admin-page-header">
+        <div>
+          <h1 class="text-xl sm:text-2xl font-bold text-slate-800">Event Management</h1>
+          <p class="text-sm text-slate-500 mt-1">Create and manage workshops, meetings, and social events</p>
+        </div>
+        <a href="event-edit.html" class="btn-admin-primary text-sm">+ Add event</a>
+      </div>
+      <div class="admin-table-wrap">
+        <table class="admin-table">
+          <thead><tr><th>Event</th><th>Date</th><th>Type</th><th>Registrations</th><th>Status</th><th>Actions</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><div class="font-medium text-slate-800">CV & Interview Skills Workshop</div><div class="text-xs text-slate-500">Belfast · In person</div></td>
+              <td>15 Jul 2026</td><td>Workshop</td><td>18 / 30</td>
+              <td><span class="status-badge status-published">Published</span></td>
+              <td class="whitespace-nowrap"><a href="event-edit.html" class="text-teal-600 text-sm font-medium hover:underline">Edit</a></td>
+            </tr>
+            <tr>
+              <td><div class="font-medium text-slate-800">Education Working Group Meeting</div><div class="text-xs text-slate-500">Online</div></td>
+              <td>22 Jul 2026</td><td>Meeting</td><td>24 / 50</td>
+              <td><span class="status-badge status-published">Published</span></td>
+              <td><a href="event-edit.html" class="text-teal-600 text-sm font-medium hover:underline">Edit</a></td>
+            </tr>
+            <tr>
+              <td><div class="font-medium text-slate-800">Summer Social & Networking Evening</div><div class="text-xs text-slate-500">Belfast</div></td>
+              <td>5 Aug 2026</td><td>Social</td><td>0 / 60</td>
+              <td><span class="status-badge status-draft">Draft</span></td>
+              <td><a href="event-edit.html" class="text-teal-600 text-sm font-medium hover:underline">Edit</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+  <div id="site-footer"></div>
+  <script src="../../assets/js/layout.js"></script>
+  <script>initLayout({ page: 'admin-events', siteRoot: '../../', area: 'admin' });</script>
+</body>
+</html>

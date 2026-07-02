@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Library | INNNI Admin</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/styles.css">
+</head>
+<body class="bg-slate-100 min-h-screen flex flex-col">
+  <div id="site-header"></div>
+  <div class="admin-layout">
+    <div id="admin-sidebar"></div>
+    <main class="admin-main">
+
+      <div class="admin-page-header">
+        <div>
+          <h1 class="text-xl sm:text-2xl font-bold text-slate-800">Media Library</h1>
+          <p class="text-sm text-slate-500 mt-1">Images and files used across the website</p>
+        </div>
+        <button type="button" class="btn-admin-primary text-sm" onclick="alert('Mock: upload files')">Upload files</button>
+      </div>
+      <div class="admin-toolbar">
+        <div class="admin-search">
+          <input type="search" placeholder="Search media...">
+        </div>
+        <select class="w-auto text-sm"><option>All types</option><option>Images</option><option>PDFs</option></select>
+      </div>
+      <div class="media-grid">
+        <div class="media-item"><img src="../../assets/img/hero-nurses.jpg" alt=""><div class="media-meta">hero-nurses.jpg</div></div>
+        <div class="media-item"><img src="../../assets/img/workshop.jpg" alt=""><div class="media-meta">workshop.jpg</div></div>
+        <div class="media-item"><img src="../../assets/img/policy.jpg" alt=""><div class="media-meta">policy.jpg</div></div>
+        <div class="media-item"><img src="../../assets/img/team-healthcare.jpg" alt=""><div class="media-meta">team-healthcare.jpg</div></div>
+        <div class="media-item"><img src="../../assets/img/conference.jpg" alt=""><div class="media-meta">conference.jpg</div></div>
+        <div class="media-item"><img src="../../assets/img/wellbeing.jpg" alt=""><div class="media-meta">wellbeing.jpg</div></div>
+        <div class="media-item"><img src="../../assets/img/education.jpg" alt=""><div class="media-meta">education.jpg</div></div>
+        <div class="media-item"><img src="../../assets/img/networking.jpg" alt=""><div class="media-meta">networking.jpg</div></div>
+      </div>
+      <p class="text-sm text-slate-500 mt-4">14 files · 8.2 MB total</p>
+    </main>
+  </div>
+  <div id="site-footer"></div>
+  <script src="../../assets/js/layout.js"></script>
+  <script>initLayout({ page: 'admin-media', siteRoot: '../../', area: 'admin' });</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resources | INNNI Admin</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/styles.css">
+</head>
+<body class="bg-slate-100 min-h-screen flex flex-col">
+  <div id="site-header"></div>
+  <div class="admin-layout">
+    <div id="admin-sidebar"></div>
+    <main class="admin-main">
+
+      <div class="admin-page-header">
+        <div>
+          <h1 class="text-xl sm:text-2xl font-bold text-slate-800">Resource Management</h1>
+          <p class="text-sm text-slate-500 mt-1">Upload and manage downloadable documents</p>
+        </div>
+        <button type="button" class="btn-admin-primary text-sm" onclick="alert('Mock: upload dialog')">+ Upload resource</button>
+      </div>
+      <div class="admin-table-wrap">
+        <table class="admin-table">
+          <thead><tr><th>Resource</th><th>Type</th><th>Access</th><th>Downloads</th><th>Updated</th><th>Actions</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><div class="font-medium text-slate-800">NMC Registration Guide for IENs</div><div class="text-xs text-slate-500">PDF · 2.4 MB</div></td>
+              <td>PDF</td><td>Public</td><td>342</td><td class="text-slate-500">May 2026</td>
+              <td class="whitespace-nowrap"><button class="text-teal-600 text-sm font-medium hover:underline">Edit</button> · <button class="text-red-600 text-sm hover:underline">Delete</button></td>
+            </tr>
+            <tr>
+              <td><div class="font-medium text-slate-800">Trust Onboarding Checklist 2026</div><div class="text-xs text-slate-500">PDF · 340 KB</div></td>
+              <td>PDF</td><td>Members only</td><td>89</td><td class="text-slate-500">Jun 2026</td>
+              <td><button class="text-teal-600 text-sm font-medium hover:underline">Edit</button> · <button class="text-red-600 text-sm hover:underline">Delete</button></td>
+            </tr>
+            <tr>
+              <td><div class="font-medium text-slate-800">CV Template — UK Nursing Roles</div><div class="text-xs text-slate-500">DOCX · 156 KB</div></td>
+              <td>DOCX</td><td>Public</td><td>218</td><td class="text-slate-500">Apr 2026</td>
+              <td><button class="text-teal-600 text-sm font-medium hover:underline">Edit</button> · <button class="text-red-600 text-sm hover:underline">Delete</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+  <div id="site-footer"></div>
+  <script src="../../assets/js/layout.js"></script>
+  <script>initLayout({ page: 'admin-resources', siteRoot: '../../', area: 'admin' });</script>
+</body>
+</html>

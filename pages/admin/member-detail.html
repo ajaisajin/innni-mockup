@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Member Detail | INNNI Admin</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/styles.css">
+</head>
+<body class="bg-slate-100 min-h-screen flex flex-col">
+  <div id="site-header"></div>
+  <div class="admin-layout">
+    <div id="admin-sidebar"></div>
+    <main class="admin-main">
+
+      <a href="members.html" class="text-sm text-teal-600 hover:underline">&larr; Back to members</a>
+      <div class="admin-page-header mt-4">
+        <div>
+          <h1 class="text-xl sm:text-2xl font-bold text-slate-800">Anita Kaur</h1>
+          <p class="text-sm text-slate-500 mt-1">Registered 2 July 2026 · Awaiting administrator approval</p>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <button type="button" class="btn-admin-primary text-sm" onclick="alert('Mock: member approved')">Approve membership</button>
+          <button type="button" class="btn-admin-danger text-sm" onclick="alert('Mock: registration rejected')">Reject</button>
+        </div>
+      </div>
+      <div class="grid lg:grid-cols-3 gap-6">
+        <div class="lg:col-span-2 space-y-6">
+          <section class="card">
+            <h2 class="font-bold text-slate-800 mb-4">Personal details</h2>
+            <dl class="grid sm:grid-cols-2 gap-4 text-sm">
+              <div><dt class="text-slate-500">Email</dt><dd class="font-medium text-slate-800 mt-0.5">anita.kaur@example.com</dd></div>
+              <div><dt class="text-slate-500">Phone</dt><dd class="font-medium text-slate-800 mt-0.5">+44 7700 900123</dd></div>
+              <div><dt class="text-slate-500">NMC PIN</dt><dd class="font-medium text-slate-800 mt-0.5">21A4567E</dd></div>
+              <div><dt class="text-slate-500">Trust / Employer</dt><dd class="font-medium text-slate-800 mt-0.5">Belfast Health & Social Care Trust</dd></div>
+              <div><dt class="text-slate-500">Country of training</dt><dd class="font-medium text-slate-800 mt-0.5">India</dd></div>
+              <div><dt class="text-slate-500">Email verified</dt><dd class="font-medium text-green-600 mt-0.5">Yes · 2 Jul 2026</dd></div>
+            </dl>
+          </section>
+          <section class="card">
+            <h2 class="font-bold text-slate-800 mb-4">Activity</h2>
+            <ul class="space-y-3 text-sm">
+              <li class="flex gap-3"><span class="text-slate-400 whitespace-nowrap">2 Jul</span><span>Completed registration form</span></li>
+              <li class="flex gap-3"><span class="text-slate-400 whitespace-nowrap">2 Jul</span><span>Email verification confirmed</span></li>
+              <li class="flex gap-3"><span class="text-slate-400 whitespace-nowrap">2 Jul</span><span>Payment received — GBP 12.00 (Annual)</span></li>
+            </ul>
+          </section>
+        </div>
+        <div class="space-y-6">
+          <section class="card">
+            <h2 class="font-bold text-slate-800 mb-4">Membership</h2>
+            <p class="text-sm text-slate-500 mb-2">Status</p>
+            <span class="status-badge status-pending mb-4">Pending approval</span>
+            <p class="text-sm text-slate-500 mb-1">Plan</p>
+            <p class="font-medium text-slate-800 mb-4">Annual — GBP 12/year</p>
+            <label class="text-sm text-slate-500 block mb-1">Admin notes</label>
+            <textarea rows="3" class="text-sm" placeholder="Internal notes (not visible to member)..."></textarea>
+          </section>
+          <section class="card">
+            <h2 class="font-bold text-slate-800 mb-4">Actions</h2>
+            <div class="space-y-2">
+              <button type="button" class="btn-admin-secondary w-full text-sm" onclick="alert('Mock: reset password email sent')">Send password reset</button>
+              <button type="button" class="btn-admin-secondary w-full text-sm" onclick="alert('Mock: membership suspended')">Suspend account</button>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
+  <div id="site-footer"></div>
+  <script src="../../assets/js/layout.js"></script>
+  <script>initLayout({ page: 'admin-members', siteRoot: '../../', area: 'admin' });</script>
+</body>
+</html>

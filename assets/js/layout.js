@@ -5,6 +5,7 @@
  *   index.html           -> siteRoot: ''
  *   pages/*.html         -> siteRoot: '../'
  *   pages/member/*.html  -> siteRoot: '../../'
+ *   pages/admin/*.html   -> siteRoot: '../../'
  */
 
 const NAV_PUBLIC = [
@@ -36,12 +37,26 @@ const NAV_MEMBER = [
   { id: 'member-groups', label: 'Working Groups', href: 'working-groups.html', icon: 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z' },
 ];
 
+const NAV_ADMIN = [
+  { id: 'admin-dashboard', label: 'Dashboard', href: 'dashboard.html', icon: 'M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z' },
+  { id: 'admin-members', label: 'Members', href: 'members.html', icon: 'M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z', badge: '3' },
+  { id: 'admin-events', label: 'Events', href: 'events.html', icon: 'M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z' },
+  { id: 'admin-news', label: 'News & Announcements', href: 'news.html', icon: 'M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z' },
+  { id: 'admin-resources', label: 'Resources', href: 'resources.html', icon: 'M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z' },
+  { id: 'admin-media', label: 'Media Library', href: 'media.html', icon: 'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z' },
+  { id: 'admin-pages', label: 'Pages', href: 'pages.html', icon: 'M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z' },
+  { id: 'admin-contacts', label: 'Contact Messages', href: 'contacts.html', icon: 'M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z', badge: '5' },
+  { id: 'admin-payments', label: 'Payments', href: 'payments.html', icon: 'M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z' },
+  { id: 'admin-settings', label: 'Users & Roles', href: 'settings.html', icon: 'M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z M15 12a3 3 0 11-6 0 3 3 0 016 0z' },
+];
+
 function resolvePaths(siteRoot) {
   const root = siteRoot || '';
   return {
     home: root + 'index.html',
     pages: root + 'pages/',
     member: root + 'pages/member/',
+    admin: root + 'pages/admin/',
   };
 }
 
@@ -132,6 +147,29 @@ function renderMemberHeader(paths) {
   </header>`;
 }
 
+function renderAdminHeader(paths) {
+  const homeHref = paths.home;
+  return `
+  <header class="admin-header sticky top-0 z-50">
+    <nav class="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-14 sm:h-16 gap-2">
+        <a href="${paths.admin}dashboard.html" class="flex items-center gap-2 min-w-0">
+          <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-slate-700 flex items-center justify-center text-white font-bold text-sm flex-shrink-0">IN</div>
+          <div class="min-w-0">
+            <span class="font-bold text-white text-sm sm:text-base block truncate">Admin Panel</span>
+            <span class="badge-admin text-xs">INNNI</span>
+          </div>
+        </a>
+        <div class="flex items-center gap-2 sm:gap-4 flex-shrink-0">
+          <span class="hidden md:block text-sm text-slate-300">Signed in as <strong class="text-white">Sarah O'Neill</strong></span>
+          <a href="${homeHref}" class="text-xs sm:text-sm text-slate-400 hover:text-white whitespace-nowrap">View site</a>
+          <a href="${paths.admin}login.html" class="text-xs sm:text-sm text-red-400 hover:text-red-300 font-medium whitespace-nowrap">Logout</a>
+        </div>
+      </div>
+    </nav>
+  </header>`;
+}
+
 function renderFooter(paths) {
   return `
   <footer class="bg-slate-900 text-slate-300 mt-auto">
@@ -174,8 +212,21 @@ function renderFooter(paths) {
       </div>
       <div class="border-t border-slate-700 mt-8 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-slate-500">
         <p>&copy; 2026 INNNI. All rights reserved.</p>
-        <p>Mock design prototype — not a live application</p>
+        <p class="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-center">
+          <span>Mock design prototype — not a live application</span>
+          <a href="${paths.admin}login.html" class="text-slate-500 hover:text-teal-400 underline underline-offset-2">Staff login</a>
+        </p>
       </div>
+    </div>
+  </footer>`;
+}
+
+function renderAdminFooter() {
+  return `
+  <footer class="admin-footer mt-auto">
+    <div class="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-slate-500">
+      <p>&copy; 2026 INNNI Administration</p>
+      <p>Mock admin prototype — not connected to live data</p>
     </div>
   </footer>`;
 }
@@ -197,6 +248,28 @@ function renderMemberSidebar(activePage) {
       <p class="text-xs text-slate-500">Renews: 15 Jan 2027</p>
     </div>
     <nav class="member-nav">${links}</nav>
+  </aside>`;
+}
+
+function renderAdminSidebar(activePage) {
+  const links = NAV_ADMIN.map((n) => {
+    const active = activePage === n.id ? 'active' : '';
+    const badge = n.badge
+      ? `<span class="admin-nav-badge">${n.badge}</span>`
+      : '';
+    return `
+    <a href="${n.href}" class="${active}">
+      <svg class="w-4 h-4 md:w-5 md:h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="${n.icon}"/></svg>
+      <span class="flex-grow">${n.label}</span>${badge}
+    </a>`;
+  }).join('');
+  return `
+  <aside class="admin-sidebar">
+    <div class="admin-sidebar-info p-4 border-b border-slate-700">
+      <p class="text-xs font-semibold text-slate-400 uppercase tracking-wide">Administration</p>
+      <p class="text-sm font-medium text-white mt-1">Role: <span class="text-teal-400">Super Admin</span></p>
+    </div>
+    <nav class="admin-nav">${links}</nav>
   </aside>`;
 }
 
@@ -231,17 +304,25 @@ function initLayout(options = {}) {
   const paths = resolvePaths(siteRoot);
   const headerEl = document.getElementById('site-header');
   const footerEl = document.getElementById('site-footer');
-  const sidebarEl = document.getElementById('member-sidebar');
+  const sidebarEl = document.getElementById('member-sidebar') || document.getElementById('admin-sidebar');
 
   if (headerEl) {
-    headerEl.innerHTML =
-      area === 'member' ? renderMemberHeader(paths) : renderPublicHeader(paths, page);
+    if (area === 'member') {
+      headerEl.innerHTML = renderMemberHeader(paths);
+    } else if (area === 'admin') {
+      headerEl.innerHTML = renderAdminHeader(paths);
+    } else {
+      headerEl.innerHTML = renderPublicHeader(paths, page);
+    }
   }
   if (footerEl) {
-    footerEl.innerHTML = renderFooter(paths);
+    footerEl.innerHTML = area === 'admin' ? renderAdminFooter() : renderFooter(paths);
   }
   if (sidebarEl && area === 'member') {
     sidebarEl.innerHTML = renderMemberSidebar(page);
+  }
+  if (sidebarEl && area === 'admin') {
+    sidebarEl.innerHTML = renderAdminSidebar(page);
   }
 
   setupMobileMenu();

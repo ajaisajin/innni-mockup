@@ -1,6 +1,6 @@
 # INNNI Website — HTML Mockup Prototype
 
-Static HTML mock designs for the INNNI association website (public site + member portal).
+Static HTML mock designs for the INNNI association website (public site + member portal + admin panel).
 
 **This is a design prototype only** — no real backend, authentication, or payments.
 
@@ -23,6 +23,7 @@ Or open `index.html` (root only) directly in your browser (double-click).
 2. Browse public pages via top navigation
 3. Click **Member Login** → use any credentials → redirects to **Dashboard**
 4. Explore member portal via sidebar
+5. For admin: click **Staff login** in the site footer, or go to `pages/admin/login.html` directly
 
 ## Pages included
 
@@ -64,6 +65,25 @@ Or open `index.html` (root only) directly in your browser (double-click).
 | Events | `pages/member/events.html` |
 | Working groups | `pages/member/working-groups.html` |
 
+### Admin panel (14 pages)
+
+| Page | File |
+|------|------|
+| Admin login | `pages/admin/login.html` |
+| Dashboard | `pages/admin/dashboard.html` |
+| Members | `pages/admin/members.html` |
+| Member detail | `pages/admin/member-detail.html` |
+| Events | `pages/admin/events.html` |
+| Edit event | `pages/admin/event-edit.html` |
+| News & announcements | `pages/admin/news.html` |
+| Edit article | `pages/admin/news-edit.html` |
+| Resources | `pages/admin/resources.html` |
+| Media library | `pages/admin/media.html` |
+| Pages & menu | `pages/admin/pages.html` |
+| Contact messages | `pages/admin/contacts.html` |
+| Payments | `pages/admin/payments.html` |
+| Users & roles | `pages/admin/settings.html` |
+
 ## Images
 
 Placeholder photos are stored locally in `assets/img/` (sourced from [Unsplash](https://unsplash.com) for mockup use only). Replace with INNNI's own photography before go-live.
@@ -71,7 +91,7 @@ Placeholder photos are stored locally in `assets/img/` (sourced from [Unsplash](
 ## Tech
 
 - HTML5 + [Tailwind CSS CDN](https://tailwindcss.com)
-- Shared layout via `assets/js/layout.js` (header, footer, member sidebar)
+- Shared layout via `assets/js/layout.js` (header, footer, member/admin sidebar)
 - Custom styles in `assets/css/styles.css`
 - Inter font (Google Fonts)
 

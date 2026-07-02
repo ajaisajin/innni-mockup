@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Event | INNNI Admin</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/styles.css">
+</head>
+<body class="bg-slate-100 min-h-screen flex flex-col">
+  <div id="site-header"></div>
+  <div class="admin-layout">
+    <div id="admin-sidebar"></div>
+    <main class="admin-main">
+
+      <a href="events.html" class="text-sm text-teal-600 hover:underline">&larr; Back to events</a>
+      <div class="admin-page-header mt-4">
+        <div>
+          <h1 class="text-xl sm:text-2xl font-bold text-slate-800">Edit Event</h1>
+          <p class="text-sm text-slate-500 mt-1">CV & Interview Skills Workshop</p>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <button type="button" class="btn-admin-secondary text-sm">Save draft</button>
+          <button type="button" class="btn-admin-primary text-sm" onclick="alert('Mock: event published')">Publish</button>
+        </div>
+      </div>
+      <form class="grid lg:grid-cols-3 gap-6" onsubmit="event.preventDefault(); alert('Mock: event saved');">
+        <div class="lg:col-span-2 space-y-4">
+          <div class="card space-y-4">
+            <div class="form-group"><label>Event title *</label><input type="text" value="CV & Interview Skills Workshop" required></div>
+            <div class="form-group"><label>Description</label>
+              <div class="rich-editor-mock">
+                <div class="rich-editor-toolbar">
+                  <button type="button">B</button><button type="button">I</button><button type="button">Link</button><button type="button">List</button>
+                </div>
+                <div class="rich-editor-body">A practical half-day workshop designed for internationally educated nurses preparing for interviews within Northern Ireland's Health and Social Care Trusts.</div>
+              </div>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div class="form-group"><label>Date *</label><input type="date" value="2026-07-15"></div>
+              <div class="form-group"><label>Time</label><input type="text" value="10:00 AM - 1:00 PM"></div>
+            </div>
+            <div class="form-group"><label>Venue</label><input type="text" value="Belfast City Centre"></div>
+          </div>
+        </div>
+        <div class="space-y-4">
+          <div class="card space-y-4">
+            <div class="form-group"><label>Status</label><select><option selected>Published</option><option>Draft</option><option>Cancelled</option></select></div>
+            <div class="form-group"><label>Event type</label><select><option selected>Workshop</option><option>Meeting</option><option>Social</option></select></div>
+            <div class="form-group"><label>Capacity</label><input type="number" value="30"></div>
+            <label class="flex items-center gap-2 text-sm"><input type="checkbox" checked class="w-4 h-4 rounded"> Members only registration</label>
+            <label class="flex items-center gap-2 text-sm"><input type="checkbox" checked class="w-4 h-4 rounded"> Send confirmation email</label>
+          </div>
+          <div class="card">
+            <label class="block text-sm font-medium text-slate-700 mb-2">Featured image</label>
+            <img src="../../assets/img/workshop.jpg" alt="" class="w-full h-32 object-cover rounded-lg mb-2">
+            <button type="button" class="btn-admin-secondary w-full text-sm" onclick="alert('Mock: open media library')">Choose from library</button>
+          </div>
+        </div>
+      </form>
+    </main>
+  </div>
+  <div id="site-footer"></div>
+  <script src="../../assets/js/layout.js"></script>
+  <script>initLayout({ page: 'admin-events', siteRoot: '../../', area: 'admin' });</script>
+</body>
+</html>

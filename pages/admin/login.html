@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login | INNNI Admin</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/styles.css">
+</head>
+<body class="bg-slate-900 min-h-screen flex flex-col">
+  <div class="flex-grow flex items-center justify-center py-6 sm:py-12 px-4">
+    <div class="w-full max-w-md">
+      <div class="text-center mb-8">
+        <div class="w-14 h-14 rounded-xl bg-slate-700 text-white font-bold text-lg flex items-center justify-center mx-auto mb-4">IN</div>
+        <h1 class="text-xl sm:text-2xl font-bold text-white">INNNI Admin</h1>
+        <p class="text-slate-400 mt-2 text-sm">Sign in to manage the website and membership</p>
+      </div>
+      <div class="card">
+        <form class="space-y-4" onsubmit="event.preventDefault(); window.location.href='dashboard.html';">
+          <div class="form-group"><label>Email</label><input type="email" value="admin@innni.org.uk" required></div>
+          <div class="form-group"><label>Password</label><input type="password" value="password" required></div>
+          <button type="submit" class="btn-admin-primary w-full">Sign In</button>
+        </form>
+        <p class="text-center text-xs text-slate-500 mt-6">Restricted access — authorised INNNI staff only</p>
+      </div>
+      <p class="text-center text-sm mt-6"><a href="../../index.html" class="text-slate-500 hover:text-teal-400">&larr; Back to public website</a></p>
+    </div>
+  </div>
+</body>
+</html>

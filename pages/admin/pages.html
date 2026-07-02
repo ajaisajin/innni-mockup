@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pages | INNNI Admin</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/styles.css">
+</head>
+<body class="bg-slate-100 min-h-screen flex flex-col">
+  <div id="site-header"></div>
+  <div class="admin-layout">
+    <div id="admin-sidebar"></div>
+    <main class="admin-main">
+
+      <div class="admin-page-header">
+        <div>
+          <h1 class="text-xl sm:text-2xl font-bold text-slate-800">Page Management</h1>
+          <p class="text-sm text-slate-500 mt-1">Edit static website pages and menu structure</p>
+        </div>
+      </div>
+      <div class="admin-table-wrap">
+        <table class="admin-table">
+          <thead><tr><th>Page</th><th>URL slug</th><th>In menu</th><th>Last updated</th><th>Actions</th></tr></thead>
+          <tbody>
+            <tr><td class="font-medium">About Us</td><td class="text-slate-500">/about</td><td>Main nav</td><td class="text-slate-500">12 May 2026</td><td><button class="text-teal-600 text-sm font-medium hover:underline">Edit content</button></td></tr>
+            <tr><td class="font-medium">Membership</td><td class="text-slate-500">/membership</td><td>Main nav</td><td class="text-slate-500">8 Jun 2026</td><td><button class="text-teal-600 text-sm font-medium hover:underline">Edit content</button></td></tr>
+            <tr><td class="font-medium">Advocacy & Policy</td><td class="text-slate-500">/advocacy</td><td>More menu</td><td class="text-slate-500">3 Apr 2026</td><td><button class="text-teal-600 text-sm font-medium hover:underline">Edit content</button></td></tr>
+            <tr><td class="font-medium">Safeguarding</td><td class="text-slate-500">/safeguarding</td><td>More menu</td><td class="text-slate-500">20 Mar 2026</td><td><button class="text-teal-600 text-sm font-medium hover:underline">Edit content</button></td></tr>
+            <tr><td class="font-medium">Privacy Policy</td><td class="text-slate-500">/privacy</td><td>Footer</td><td class="text-slate-500">1 Jan 2026</td><td><button class="text-teal-600 text-sm font-medium hover:underline">Edit content</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <section class="card mt-6">
+        <h2 class="font-bold text-slate-800 mb-4">Main navigation order</h2>
+        <p class="text-sm text-slate-600 mb-4">Drag to reorder menu items (mock — not functional in prototype).</p>
+        <ol class="space-y-2 text-sm">
+          <li class="p-3 bg-slate-50 rounded-lg border flex justify-between"><span>Home</span><span class="text-slate-400">Fixed</span></li>
+          <li class="p-3 bg-white rounded-lg border flex justify-between"><span>About Us</span><span class="text-slate-400">↕</span></li>
+          <li class="p-3 bg-white rounded-lg border flex justify-between"><span>Membership</span><span class="text-slate-400">↕</span></li>
+          <li class="p-3 bg-white rounded-lg border flex justify-between"><span>News</span><span class="text-slate-400">↕</span></li>
+          <li class="p-3 bg-white rounded-lg border flex justify-between"><span>Events</span><span class="text-slate-400">↕</span></li>
+        </ol>
+      </section>
+    </main>
+  </div>
+  <div id="site-footer"></div>
+  <script src="../../assets/js/layout.js"></script>
+  <script>initLayout({ page: 'admin-pages', siteRoot: '../../', area: 'admin' });</script>
+</body>
+</html>

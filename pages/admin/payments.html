@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payments | INNNI Admin</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/styles.css">
+</head>
+<body class="bg-slate-100 min-h-screen flex flex-col">
+  <div id="site-header"></div>
+  <div class="admin-layout">
+    <div id="admin-sidebar"></div>
+    <main class="admin-main">
+
+      <div class="admin-page-header">
+        <div>
+          <h1 class="text-xl sm:text-2xl font-bold text-slate-800">Payment Transactions</h1>
+          <p class="text-sm text-slate-500 mt-1">Stripe payment history and membership renewals</p>
+        </div>
+        <button type="button" class="btn-admin-secondary text-sm" onclick="alert('Mock: export report')">Export report</button>
+      </div>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-6">
+        <div class="admin-stat"><div class="value text-teal-600">GBP 4,892</div><div class="label">Total revenue (2026)</div></div>
+        <div class="admin-stat"><div class="value">428</div><div class="label">Transactions</div></div>
+        <div class="admin-stat"><div class="value text-green-600">99.3%</div><div class="label">Success rate</div></div>
+        <div class="admin-stat"><div class="value text-red-600">3</div><div class="label">Failed payments</div></div>
+      </div>
+      <div class="admin-toolbar">
+        <select class="w-full sm:w-auto text-sm"><option>All time</option><option selected>This month</option><option>Last 30 days</option></select>
+        <select class="w-full sm:w-auto text-sm"><option>All statuses</option><option>Succeeded</option><option>Failed</option><option>Refunded</option></select>
+      </div>
+      <div class="admin-table-wrap">
+        <table class="admin-table">
+          <thead><tr><th>Transaction ID</th><th>Member</th><th>Plan</th><th>Amount</th><th>Status</th><th>Date</th></tr></thead>
+          <tbody>
+            <tr><td class="font-mono text-xs text-slate-500">pi_3Nx8k2LkdIw...</td><td>Maria Santos</td><td>Annual</td><td>GBP 12.00</td><td><span class="status-badge status-active">Succeeded</span></td><td class="text-slate-500">30 Jun 2026</td></tr>
+            <tr><td class="font-mono text-xs text-slate-500">pi_3Nx7j1LkdIw...</td><td>Priya Sharma</td><td>Monthly</td><td>GBP 1.00</td><td><span class="status-badge status-active">Succeeded</span></td><td class="text-slate-500">28 Jun 2026</td></tr>
+            <tr><td class="font-mono text-xs text-slate-500">pi_3Nx6i0LkdIw...</td><td>David Chen</td><td>Annual</td><td>GBP 12.00</td><td><span class="status-badge status-active">Succeeded</span></td><td class="text-slate-500">25 Jun 2026</td></tr>
+            <tr><td class="font-mono text-xs text-slate-500">pi_3Nx5h9LkdIw...</td><td>Elena Popescu</td><td>Monthly</td><td>GBP 1.00</td><td><span class="status-badge status-expired">Failed</span></td><td class="text-slate-500">20 Jun 2026</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-xs text-slate-400 mt-4">Payments processed securely via Stripe. PCI compliance handled by Stripe-hosted checkout.</p>
+    </main>
+  </div>
+  <div id="site-footer"></div>
+  <script src="../../assets/js/layout.js"></script>
+  <script>initLayout({ page: 'admin-payments', siteRoot: '../../', area: 'admin' });</script>
+</body>
+</html>

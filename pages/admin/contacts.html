@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Messages | INNNI Admin</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/styles.css">
+</head>
+<body class="bg-slate-100 min-h-screen flex flex-col">
+  <div id="site-header"></div>
+  <div class="admin-layout">
+    <div id="admin-sidebar"></div>
+    <main class="admin-main">
+
+      <div class="admin-page-header">
+        <div>
+          <h1 class="text-xl sm:text-2xl font-bold text-slate-800">Contact Form Messages</h1>
+          <p class="text-sm text-slate-500 mt-1">Enquiries submitted via the public contact form</p>
+        </div>
+      </div>
+      <div class="flex flex-wrap gap-2 mb-4">
+        <button class="px-3 py-1.5 rounded-full bg-teal-600 text-white text-sm">Unread (5)</button>
+        <button class="px-3 py-1.5 rounded-full bg-white border text-slate-600 text-sm">Read</button>
+        <button class="px-3 py-1.5 rounded-full bg-white border text-slate-600 text-sm">Archived</button>
+      </div>
+      <div class="space-y-3">
+        <div class="card border-l-4 border-l-teal-500">
+          <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-2">
+            <div>
+              <p class="font-semibold text-slate-800">Membership enquiry — Annual plan</p>
+              <p class="text-sm text-slate-500">From: Rachel Murphy · rachel.m@example.com · 2 Jul 2026, 09:14</p>
+            </div>
+            <span class="status-badge status-pending shrink-0">Unread</span>
+          </div>
+          <p class="text-sm text-slate-600">Hi, I'm an IEN recently registered with the NMC. Can you confirm whether student nurses are eligible for membership before full registration?</p>
+          <div class="flex flex-wrap gap-2 mt-4">
+            <button type="button" class="btn-admin-primary text-sm">Mark as read</button>
+            <button type="button" class="btn-admin-secondary text-sm">Reply via email</button>
+            <button type="button" class="btn-admin-secondary text-sm">Archive</button>
+          </div>
+        </div>
+        <div class="card border-l-4 border-l-teal-500">
+          <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-2">
+            <div>
+              <p class="font-semibold text-slate-800">Event registration question</p>
+              <p class="text-sm text-slate-500">From: Tom Walsh · 1 Jul 2026, 16:42</p>
+            </div>
+            <span class="status-badge status-pending shrink-0">Unread</span>
+          </div>
+          <p class="text-sm text-slate-600">Is the CV workshop open to non-members, or do I need to join INNNI first?</p>
+          <div class="flex flex-wrap gap-2 mt-4">
+            <button type="button" class="btn-admin-primary text-sm">Mark as read</button>
+            <button type="button" class="btn-admin-secondary text-sm">Reply via email</button>
+          </div>
+        </div>
+        <div class="card opacity-75">
+          <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-2">
+            <div>
+              <p class="font-semibold text-slate-800">General enquiry</p>
+              <p class="text-sm text-slate-500">From: Helen O'Brien · 28 Jun 2026</p>
+            </div>
+            <span class="status-badge status-active shrink-0">Read</span>
+          </div>
+          <p class="text-sm text-slate-600">Thank you for the quick response regarding working group participation.</p>
+        </div>
+      </div>
+    </main>
+  </div>
+  <div id="site-footer"></div>
+  <script src="../../assets/js/layout.js"></script>
+  <script>initLayout({ page: 'admin-contacts', siteRoot: '../../', area: 'admin' });</script>
+</body>
+</html>

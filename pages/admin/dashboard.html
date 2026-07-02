@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | INNNI Admin</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/styles.css">
+</head>
+<body class="bg-slate-100 min-h-screen flex flex-col">
+  <div id="site-header"></div>
+  <div class="admin-layout">
+    <div id="admin-sidebar"></div>
+    <main class="admin-main">
+
+      <div class="admin-page-header">
+        <div>
+          <h1 class="text-xl sm:text-2xl font-bold text-slate-800">Dashboard</h1>
+          <p class="text-sm text-slate-500 mt-1">Overview of membership, content, and activity</p>
+        </div>
+        <a href="members.html" class="btn-admin-primary text-sm">Review pending members (3)</a>
+      </div>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-6">
+        <div class="admin-stat"><div class="value text-teal-600">512</div><div class="label">Active members</div></div>
+        <div class="admin-stat"><div class="value text-amber-600">3</div><div class="label">Pending approval</div></div>
+        <div class="admin-stat"><div class="value">GBP 428</div><div class="label">Revenue this month</div></div>
+        <div class="admin-stat"><div class="value">5</div><div class="label">Unread messages</div></div>
+      </div>
+      <div class="grid lg:grid-cols-2 gap-6">
+        <section class="card">
+          <h2 class="font-bold text-slate-800 mb-4">Recent registrations</h2>
+          <div class="admin-table-wrap border-0">
+            <table class="admin-table">
+              <thead><tr><th>Name</th><th>Status</th><th>Date</th></tr></thead>
+              <tbody>
+                <tr><td><a href="member-detail.html" class="text-teal-600 hover:underline font-medium">Anita Kaur</a></td><td><span class="status-badge status-pending">Pending</span></td><td class="text-slate-500">2 Jul 2026</td></tr>
+                <tr><td><a href="member-detail.html" class="text-teal-600 hover:underline font-medium">James Okonkwo</a></td><td><span class="status-badge status-pending">Pending</span></td><td class="text-slate-500">1 Jul 2026</td></tr>
+                <tr><td><a href="member-detail.html" class="text-teal-600 hover:underline font-medium">Maria Santos</a></td><td><span class="status-badge status-active">Active</span></td><td class="text-slate-500">30 Jun 2026</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <a href="members.html" class="text-sm text-teal-600 mt-4 inline-block hover:underline">View all members</a>
+        </section>
+        <section class="card">
+          <h2 class="font-bold text-slate-800 mb-4">Quick actions</h2>
+          <div class="grid sm:grid-cols-2 gap-3">
+            <a href="news-edit.html" class="p-4 rounded-lg border border-slate-200 hover:border-teal-300 hover:bg-teal-50 transition-colors"><p class="font-medium text-slate-800">Create news article</p><p class="text-xs text-slate-500 mt-1">Public or member-only</p></a>
+            <a href="event-edit.html" class="p-4 rounded-lg border border-slate-200 hover:border-teal-300 hover:bg-teal-50 transition-colors"><p class="font-medium text-slate-800">Add event</p><p class="text-xs text-slate-500 mt-1">Workshop, meeting, social</p></a>
+            <a href="resources.html" class="p-4 rounded-lg border border-slate-200 hover:border-teal-300 hover:bg-teal-50 transition-colors"><p class="font-medium text-slate-800">Upload resource</p><p class="text-xs text-slate-500 mt-1">PDF, DOCX, links</p></a>
+            <a href="contacts.html" class="p-4 rounded-lg border border-slate-200 hover:border-teal-300 hover:bg-teal-50 transition-colors"><p class="font-medium text-slate-800">View messages</p><p class="text-xs text-slate-500 mt-1">5 unread enquiries</p></a>
+          </div>
+        </section>
+        <section class="card lg:col-span-2">
+          <h2 class="font-bold text-slate-800 mb-4">Recent payments</h2>
+          <div class="admin-table-wrap">
+            <table class="admin-table">
+              <thead><tr><th>Member</th><th>Plan</th><th>Amount</th><th>Status</th><th>Date</th></tr></thead>
+              <tbody>
+                <tr><td>Maria Santos</td><td>Annual</td><td>GBP 12.00</td><td><span class="status-badge status-active">Succeeded</span></td><td class="text-slate-500">30 Jun 2026</td></tr>
+                <tr><td>Priya Sharma</td><td>Monthly</td><td>GBP 1.00</td><td><span class="status-badge status-active">Succeeded</span></td><td class="text-slate-500">28 Jun 2026</td></tr>
+                <tr><td>David Chen</td><td>Annual</td><td>GBP 12.00</td><td><span class="status-badge status-active">Succeeded</span></td><td class="text-slate-500">25 Jun 2026</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <a href="payments.html" class="text-sm text-teal-600 mt-4 inline-block hover:underline">View all transactions</a>
+        </section>
+      </div>
+    </main>
+  </div>
+  <div id="site-footer"></div>
+  <script src="../../assets/js/layout.js"></script>
+  <script>initLayout({ page: 'admin-dashboard', siteRoot: '../../', area: 'admin' });</script>
+</body>
+</html>

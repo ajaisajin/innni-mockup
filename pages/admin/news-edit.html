@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit News | INNNI Admin</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/styles.css">
+</head>
+<body class="bg-slate-100 min-h-screen flex flex-col">
+  <div id="site-header"></div>
+  <div class="admin-layout">
+    <div id="admin-sidebar"></div>
+    <main class="admin-main">
+
+      <a href="news.html" class="text-sm text-teal-600 hover:underline">&larr; Back to news</a>
+      <div class="admin-page-header mt-4">
+        <div>
+          <h1 class="text-xl sm:text-2xl font-bold text-slate-800">Edit Article</h1>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <button type="button" class="btn-admin-secondary text-sm">Save draft</button>
+          <button type="button" class="btn-admin-primary text-sm" onclick="alert('Mock: article published')">Publish</button>
+        </div>
+      </div>
+      <form class="grid lg:grid-cols-3 gap-6" onsubmit="event.preventDefault();">
+        <div class="lg:col-span-2 space-y-4">
+          <div class="card space-y-4">
+            <div class="form-group"><label>Title *</label><input type="text" value="INNNI response to regional nursing workforce plan"></div>
+            <div class="form-group"><label>Content</label>
+              <div class="rich-editor-mock">
+                <div class="rich-editor-toolbar">
+                  <button type="button">B</button><button type="button">I</button><button type="button">H2</button><button type="button">Link</button><button type="button">Image</button>
+                </div>
+                <div class="rich-editor-body">INNNI has submitted a formal response to the Department of Health's regional nursing workforce consultation, highlighting the vital contribution of internationally educated nurses across Northern Ireland's Trusts.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="space-y-4">
+          <div class="card space-y-4">
+            <div class="form-group"><label>Category</label><select><option selected>Policy</option><option>Wellbeing</option><option>Events</option><option>Workforce</option></select></div>
+            <div class="form-group"><label>Audience</label><select><option selected>Public (website news)</option><option>Members only (portal announcement)</option></select></div>
+            <div class="form-group"><label>Status</label><select><option selected>Published</option><option>Draft</option></select></div>
+            <div class="form-group"><label>Publish date</label><input type="date" value="2026-06-28"></div>
+          </div>
+          <div class="card">
+            <label class="block text-sm font-medium text-slate-700 mb-2">Featured image</label>
+            <img src="../../assets/img/policy.jpg" alt="" class="w-full h-32 object-cover rounded-lg mb-2">
+            <button type="button" class="btn-admin-secondary w-full text-sm">Choose from library</button>
+          </div>
+        </div>
+      </form>
+    </main>
+  </div>
+  <div id="site-footer"></div>
+  <script src="../../assets/js/layout.js"></script>
+  <script>initLayout({ page: 'admin-news', siteRoot: '../../', area: 'admin' });</script>
+</body>
+</html>
