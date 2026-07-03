@@ -210,12 +210,15 @@ function renderFooter(paths) {
           </ul>
         </div>
       </div>
-      <div class="border-t border-slate-700 mt-8 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-slate-500">
+      <div class="border-t border-slate-700 mt-8 pt-8 space-y-4">
+        <p class="text-center text-xs text-slate-500">Designed by <span class="text-slate-400 font-medium">Vertex Business Solutions</span></p>
+        <div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-slate-500">
         <p>&copy; 2026 INNNI. All rights reserved.</p>
         <p class="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-center">
           <span>Mock design prototype — not a live application</span>
           <a href="${paths.admin}login.html" class="text-slate-500 hover:text-teal-400 underline underline-offset-2">Staff login</a>
         </p>
+        </div>
       </div>
     </div>
   </footer>`;
@@ -224,9 +227,12 @@ function renderFooter(paths) {
 function renderAdminFooter() {
   return `
   <footer class="admin-footer mt-auto">
-    <div class="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-slate-500">
-      <p>&copy; 2026 INNNI Administration</p>
-      <p>Mock admin prototype — not connected to live data</p>
+    <div class="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8 py-4 space-y-3">
+      <p class="text-center text-xs text-slate-500">Designed by <span class="text-slate-400 font-medium">Vertex Business Solutions</span></p>
+      <div class="flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-slate-500">
+        <p>&copy; 2026 INNNI Administration</p>
+        <p>Mock admin prototype — not connected to live data</p>
+      </div>
     </div>
   </footer>`;
 }
